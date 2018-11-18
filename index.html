@@ -1,0 +1,723 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Usando máquinas virtuales.">
+      
+      
+        <link rel="canonical" href="https://cuadernosdenotas.github.io/virtualbox/index.html">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Virtual Box</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#2196f3">
+      
+    
+    
+      <script src="assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="css/estilos.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#virtual-box" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://cuadernosdenotas.github.io/virtualbox/" title="Virtual Box" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Virtual Box
+              </span>
+              <span class="md-header-nav__topic">
+                VirtualBox
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/cuadernosdenotas/virtualbox/" title="Repositorio en GitHub" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      cuadernosdenotas/virtualbox
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://cuadernosdenotas.github.io/virtualbox/" title="Virtual Box" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Índice de capítulos:
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/cuadernosdenotas/virtualbox/" title="Repositorio en GitHub" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      cuadernosdenotas/virtualbox
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        VirtualBox
+      </label>
+    
+    <a href="index.html" title="VirtualBox" class="md-nav__link md-nav__link--active">
+      VirtualBox
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Contenido:</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maquinas-virtuales" title="Máquinas virtuales" class="md-nav__link">
+    Máquinas virtuales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acerca-de-virtualbox" title="Acerca de VirtualBox" class="md-nav__link">
+    Acerca de VirtualBox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descargar-la-version-para-windows" title="Descargar la versión para Windows" class="md-nav__link">
+    Descargar la versión para Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descargar-la-version-para-mac" title="Descargar la versión para Mac" class="md-nav__link">
+    Descargar la versión para Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iniciando-virtualbox" title="Iniciando VirtualBox" class="md-nav__link">
+    Iniciando VirtualBox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-maquina-virtual" title="Creando un máquina virtual" class="md-nav__link">
+    Creando un máquina virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-un-sistema-operativo-en-la-maquina-virtual" title="Instalando un sistema operativo en la máquina virtual" class="md-nav__link">
+    Instalando un sistema operativo en la máquina virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-post-instalacion" title="Pasos post instalación" class="md-nav__link">
+    Pasos post instalación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guest-additions" title="Guest Additions" class="md-nav__link">
+    Guest Additions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-la-ventana" title="Tamaño de la ventana" class="md-nav__link">
+    Tamaño de la ventana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intercambio-de-datos" title="Intercambio de datos" class="md-nav__link">
+    Intercambio de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+    
+  </ul>
+
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+     <br>Índice de cuadernos:
+     <a href="https://cuadernosdenotas.github.io"> <img src="img/cuadernos.png"></a>
+  </label>
+
+
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Contenido:</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#maquinas-virtuales" title="Máquinas virtuales" class="md-nav__link">
+    Máquinas virtuales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acerca-de-virtualbox" title="Acerca de VirtualBox" class="md-nav__link">
+    Acerca de VirtualBox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descargar-la-version-para-windows" title="Descargar la versión para Windows" class="md-nav__link">
+    Descargar la versión para Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descargar-la-version-para-mac" title="Descargar la versión para Mac" class="md-nav__link">
+    Descargar la versión para Mac
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iniciando-virtualbox" title="Iniciando VirtualBox" class="md-nav__link">
+    Iniciando VirtualBox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creando-un-maquina-virtual" title="Creando un máquina virtual" class="md-nav__link">
+    Creando un máquina virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-un-sistema-operativo-en-la-maquina-virtual" title="Instalando un sistema operativo en la máquina virtual" class="md-nav__link">
+    Instalando un sistema operativo en la máquina virtual
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasos-post-instalacion" title="Pasos post instalación" class="md-nav__link">
+    Pasos post instalación
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guest-additions" title="Guest Additions" class="md-nav__link">
+    Guest Additions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tamano-de-la-ventana" title="Tamaño de la ventana" class="md-nav__link">
+    Tamaño de la ventana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intercambio-de-datos" title="Intercambio de datos" class="md-nav__link">
+    Intercambio de datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/cuadernosdenotas/virtualbox/edit/master/docs/index.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="virtual-box">Virtual Box</h1>
+<h2 id="maquinas-virtuales">Máquinas virtuales</h2>
+<p>Una máquina virtual es un software para simular un segundo ordenador cuyos programas se ejecutan en nuestra máquina física. Por ejemplo, en la siguiente imagen vemos una máquina virtual con el sistema operativo linux mostrando su escritorio en una ventana sobre la pantalla de un Mac.</p>
+<p><img alt="p026" src="img/p026.png" /></p>
+<p>El uso de máquinas virtuales resulta interesante para muchos propósitos:</p>
+<ul>
+<li>
+<p>supongamos que tenemos una máquina Mac y necesitamos ejecutar un programa windows; podríamos abrir una máquina virtual con el sistema operativo de Microsoft y ejecutar allí el programa deseado</p>
+</li>
+<li>
+<p>o bien queremos probar el sistema operativo Linux en una máquina windows; la máquina virtual permite hacerlo sin necesidad de desinstalar lo que tenemos</p>
+</li>
+<li>
+<p>imaginemos por otra parte que estamos desarrollando una página web y queremos comprobar como se visualiza en cada sistema operativo. Podemos crear diferentes máquinas virtuales y hacer pruebas en cada una de ellas</p>
+</li>
+<li>
+<p>o queremos navegar por Internet dejando posibles troyanos alejados de nuestra máquina física. Siempre podemos reinstalar de vez en cuando la máquina virtual y hacer limpieza&hellip;</p>
+</li>
+</ul>
+<p>Todo esto se consigue con la ayuda de un software apropiado. En nuestro caso vamos a utilizar <em>VirtualBox</em>. Este programa hace lo siguiente:</p>
+<ul>
+<li>
+<p>utiliza parte de la memoria del ordenador, asignándola a la máquina virtual.</p>
+</li>
+<li>
+<p>reserva parte del disco duro para simular un disco virtual</p>
+</li>
+<li>
+<p>comparte recursos con la máquina física: teclado, unidad DVD, USB, e incluso el portapapeles para copiar y pegar contenidos de la máquina virtual a la física, o a la inversa.</p>
+</li>
+</ul>
+<p>Claro que, no todo son ventajas. Los tiempos de arranque y apagado se multiplican por dos, ya que ahora tendremos dos máquinas. Y la velocidad de ejecución de programas dependerá de los recursos asignados. En un equipo de 2 Mb de memoria, destinando la mitad a cada máquina, el rendimiento podría resentirse, por ejemplo.</p>
+<h2 id="acerca-de-virtualbox">Acerca de VirtualBox</h2>
+<p>VirtualBox fue creado en 2007 por una empresa alemana llamada <em>Innotek GmbH</em>. Aunque en sus inicios era un producto comercial, existía una versión gratuita para uso personal o evaluación. En 2008 <em>Innotek</em> fue adquirido por <em>Sun Microsystems</em>, quien a su vez fue absorbida en 2010 por <em>Oracle Corporation</em>. En la actualidad, Oracle lo distribuye como <em>Open Source</em> en su página web <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a></p>
+<p><img alt="p001" src="img/p001.png" /></p>
+<p>En la página de descargas tenemos versiones para diferentes sistemas operativos, así como el manual de usuario y el &ldquo;pack de extensiones&rdquo;, complemento que debemos instalar si quereremos hacer uso de algunas funcionalidades adicionales, como es el caso del soporte para USB o las carpetas compartidas entre máquina física y virtual.</p>
+<p><img alt="p002" src="img/p002.png" /></p>
+<h2 id="descargar-la-version-para-windows">Descargar la versión para Windows</h2>
+<p>En windows el archivo que obtenemos es un ejecutable llamado algo así como <em>VirtualBox.exe</em> (generalmente el nombre del archivo lleva también el número de versión). Una vez descargado, hacemos doble clic sobre el fichero para iniciar el proceso de instalación y seguimos las indicaciones del asistente.</p>
+<p>Finalizado el proceso, tendremos un nuevo grupo <em>VirtualBox</em> en el menú <em>Inicio</em> del escritorio.</p>
+<p>VirtualBox puede desinstalarse desde el <em>Panel de Control</em> de Windows, seleccionando la opción <em>Añadir/Quitar Programas</em>. </p>
+<h2 id="descargar-la-version-para-mac">Descargar la versión para Mac</h2>
+<p>La versión para Mac se descarga en forma de archivo .dmg (imagen de disco). Al hacer doble clic en el fichero descargado se abrirá una ventana mostrándonos el contenido. Hacemos clic en el programa de instalación <em>VirtualBox.mpkg</em> que encontraremos dentro de esa imagen de disco.</p>
+<p>Tras finalizar el proceso de instalación, encontraremos VirtualBox en la carpeta <em>Aplicaciones</em> del sistema.</p>
+<p>Para desinstalar VirtualBox, abrir de nuevo la imagen de disco .img y hacer clic en el icono <em>uninstall</em>.</p>
+<h2 id="iniciando-virtualbox">Iniciando VirtualBox</h2>
+<p>Cuando ejecutemos VirtualBox tendremos en nuestro escritorio dos ventanas. En la pequeña vemos el panel de control, con una lista de máquinas virtuales que podemos configurar y gestionar. La ventana grande con fondo azul muestra el escritorio de una de esas máquinas, ejecutandose bajo el sistema operativo Linux.</p>
+<p><img alt="p003" src="img/p003.png" /></p>
+<p>Para poner en marcha VirtualBox, en ordenadores Windows, pulsamos sobre el botón <em>Inicio</em> del escritorio y seguidamente en el grupo <em>VirtualBox</em>.</p>
+<p>En un Mac, abrimos la ventana del <em>Finder</em> y hacemos doble clic en el icono <em>VirtualBox</em> de la carpeta <em>Aplicaciones</em>. </p>
+<p>Cuando la máquina física es Linux o Unix encontraremos alguna entrada <em>VirtualBox</em> en el menú de aplicaciones, posiblemente en los apartados <em>Sistema</em> o <em>Herramientas del sistema</em>.</p>
+<p>Alternativamente podemos arrancar VirtualBox desde un terminal con el comando</p>
+<div class="codehilite"><pre><span></span>$ VirtualBox
+</pre></div>
+
+<p>Al iniciarse se verá la ventana de control ya mencionada, también conocida como <em>VirtualBox Manager</em>. En el panel izquierdo tenemos una lista (por ahora en blanco) de nuestras máquinas virtuales. Los iconos superiores permiten crear/eliminar máquinas, configurarlas o ponerlas en marcha.</p>
+<p>El panel de la derecha muestra las características de la máquina seleccionada en la lista. Como no tenemos ninguna, se muestra un mensaje de bienvenida.</p>
+<p><img alt="p004" src="img/p004.png" /></p>
+<h2 id="creando-un-maquina-virtual">Creando un máquina virtual</h2>
+<p>Vamos a crear una máquina funcionando con el sistema operativo Ubuntu, una de las opciones más populares de Linux. Usaremos la versión Xubuntu, que utiliza el escritorio Xfce. Se trata de una versión con unos requerimientos gráficos no tan exigentes como otras más vistosas, lo que nos proporcionará mayor agilidad en el funcionamiento.</p>
+<p>Para configurar la máquina necesitamos consultar los requerimientos mínimos (tamaño de memoria, disco duro, etc) que podemos ver en:
+<a href="https://xubuntu.org/getxubuntu/requirements/">https://xubuntu.org/getxubuntu/requirements/</a></p>
+<p>En la ventana principal de VirtualBox pulsamos en el icono <em>Nuevo</em>, lo que da inicio al asistente para crear una nueva máquina. En la primera ventana tecleamos el nombre que le asignamos y el tipo de sistema operativo que vamos a instalar:</p>
+<p><img alt="p005" src="img/p005.png" /></p>
+<p>En la siguiente ventana decidimos que parte de la memoria de nuestro equipo vamos a reservar para la máquina virtual. Téngase en cuenta que si dejamos poca memoria para la máquina física, esta se verá ralentizada. Nos ajustamos a los requerimientos del sistema operativo a instalar:</p>
+<p><img alt="p006" src="img/p006.png" /></p>
+<p>El siguiente paso es crear un disco duro para la máquina virtual. En realidad se trata de un enorme fichero con la extensión .vdi en nuestra máquina física:</p>
+<p><img alt="p007" src="img/p007.png" /></p>
+<p>VirtualBox es capaz de trabajar con diferentes formatos de discos virtuales. Seleccionamos el formato nativo de Vbox:</p>
+<p><img alt="p008" src="img/p008.png" /></p>
+<p>Tenemos dos posibilidades: un gran archivo de tamaño determinado, o uno que vaya creciendo dinámicamente para almacenar ese disco duro virtual. Seleccionamos la segunda opción:</p>
+<p><img alt="p009" src="img/p009.png" /></p>
+<p>Seguidamente seleccionamos el tamaño máximo del disco duro virtual:</p>
+<p><img alt="p010" src="img/p010.png" /></p>
+<p>Al pulsar en el botón [Crear] se creará la máquina virtual y aparecerá en nuestra lista de máquinas en la ventana principal de VirtualBox.</p>
+<p><img alt="p011" src="img/p011.png" /></p>
+<h2 id="instalando-un-sistema-operativo-en-la-maquina-virtual">Instalando un sistema operativo en la máquina virtual</h2>
+<p>Lo primero es seleccionar el sistema operativo a instalar. Debe ser uno para el que tengamos el DVD o CD de instalación. En nuestro ejemplo, vamos a instalar <em>Linux</em>. Tenemos un ranking de las distribuciones más populares en http://distrowatch.com/. La que instalaremos es una de las más populares, <em>Ubuntu</em>, que se distribuye en diferentes alternativas dependiendo del programa de escritorio que queramos utilizar. Dado que el rendimiento de la máquina virtual siempre va a ser algo inferior al de la máquina física, prefiero utilizar un escritorio light como es el caso de <em>Xfce</em>.</p>
+<p>La versión de Ubuntu con este escritorio se llama <em>Xubuntu</em>, y podemos descargar el CD de instalación desde <a href="https://xubuntu.org/">https://xubuntu.org/</a></p>
+<p>Tanto Ubuntu como Xubuntu publican una nueva versión cada seis meses, generalmente en abril y en octubre. Cada versión tiene un número que indica el año y mes de lanzamiento. Por ejemplo, la versión 16.04 fue la presentada en abril de 2016. Además se suelen bautizar con nombres de animales más o menos exóticos. La 16.04 es la &ldquo;Xenial Xerus&rdquo;.</p>
+<p>Ubuntu se refresca diariamente con las últimas actualizaciones de cada programa. El mantenimiento está garantizado durante un período de nueve meses a contar desde el lanzamiento de cada versión, margen suficiente para que descarguemos e instalemos la siguiente. Para aquellas personas que no quieran estar cambiando continuamente de versión, existen unas especiales llamadas <em>LTS</em> (Long Time Support) cuyo mantenimiento se garantiza durante tres años.</p>
+<p>La página de descargas de Xubuntu proporciona tanto la última versión regular como la LTS más reciente. Lo que obtenemos es un archivo con la extensión .iso que contiene una imagen de disco. El nombre puede ser algo así como xubuntu-16.10-desktop-amd64.iso. Tenemos dos opciones:</p>
+<ul>
+<li>grabar un CD o un DVD a partir de ese archivo de imagen</li>
+<li>utilizar el archivo como CD virtual. Vamos a optar por esta segunda opción.</li>
+</ul>
+<p>El primer paso es iniciar <em>VirtualBox</em> y en la lista de máquinas virtuales de la izquierda seleccionar la máquina que hemos creado. Seguidamente pulsamos en el icono <code class="codehilite">Iniciar</code>:</p>
+<p><img alt="p011" src="img/p011.png" /></p>
+<p>Cuando iniciamos la máquina virtual por primera vez, <em>VirtualBox</em> nos pregunta si tenemos un DVD de instalación o vamos a usar un disco virtual:</p>
+<p><img alt="p012" src="img/p012.png" /></p>
+<p>Esta ventana muestra una lista desplegable para seleccionar entre nuestras unidades, y un pequeño icono amarillo a la derecha para seleccionar un archivo de imagen como DVD virtual. Pulsamos aquí y seleccionamos el archivo descargado:</p>
+<p><img alt="p013" src="img/p013.png" /></p>
+<p>Al pulsar en el botón <code class="codehilite">Iniciar</code> se arranca la máquina virtual en una segunda ventana:</p>
+<p><img alt="p014" src="img/p014.png" /></p>
+<p>En la barra superior de la ventana veremos el nombre de la máquina, y en la barra inferior una serie de iconos para controlarla.</p>
+<p>Si el DVD de instalación no es válido, nuestra máquina mostrará la pantalla en negro y un mensaje de error:</p>
+<p><img alt="p025" src="img/p025.png" /></p>
+<p>En caso contrario, se iniciará el proceso de instalación. Finalizado este, tendremos el escritorio de nuestra máquina virtual en una ventana de la máquina física.</p>
+<p><img alt="p026" src="img/p026.png" /></p>
+<h2 id="pasos-post-instalacion">Pasos post instalación</h2>
+<h3 id="guest-additions">Guest Additions</h3>
+<p>VirtualBox es un software instalado en nuestra máquina física, pero la máquina virtual no es consciente de estar ejecutándose bajo la tutela de Vbox. Todo el software instalado en ella está configurado para una máquina física.</p>
+<p>Algunas de las posibilidades que proporciona VirtualBox no funcionan correctamente si en la máquina virtual no instalamos algunos programas complementarios. Estos se encuentran en un CD virtual llamado &ldquo;Guest Additions&rdquo;.</p>
+<p>Este CD lo proporciona VirtualBox. Basta con iniciar la máquina virtual y desde el menú de VirtualBox, seleccionar la  opción del menú <em>Dispositivos &gt; Instalar Guest Additions</em>.</p>
+<p>Una vez realizado este paso aparece ese CD virtual en el escritorio de la máquina. Haciendo doble clic en el icono, visualizaremos su contenido:</p>
+<p><img alt="p016" src="img/p016.png" /></p>
+<p>Tenemos que ejecutar el programa <em>VboxLinuxAdditions.run</em>. Para ello, comenzamos por tomar nota de la carpeta donde se aloja el CD virtual:</p>
+<p><img alt="p017" src="img/p017.png" /></p>
+<p>En Linux, y en todos los sistemas operativos derivados de Unix, no existen letras de unidad al estilo de windows, por ejemplo, C:. En su lugar, cada disco está asociado a una carpeta. En nuestro ejemplo, los CD, los DVD, etc, están asociados a la carpeta <strong>/media</strong>. Esta carpeta se muestra vacía cuando no hay ningún CD insertado.</p>
+<p>Seguidamente abrimos una sesión de terminal. Encontraremos el acceso en el menú de xubuntu, con el nombre de Emulador de terminal:</p>
+<p><img alt="p018" src="img/p018.png" /></p>
+<p>En el terminal, nos situamos en la carpeta en cuestión introduciendo a continuación del prompt $ el comando</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> /media/jf/VBOXADDITIONS_5.1.8_111374/
+</pre></div>
+
+<p><img alt="p027" src="img/p027.png" /></p>
+<p>Seguidamente comprobamos el contenido de la carpeta con el comando ls.</p>
+<div class="codehilite"><pre><span></span>$ ls
+32Bit  AUTORUN.INF  cert  runasroot.sh  VboxSolarisAdditions.pkg
+VboxWindowsAdditions.exe  64Bit  autorun.sh   OS2   VBoxLinuxAdditions.run  VBoxWindowsAdditions-amd64.exe  VBoxWindowsAdditions-x86.exe
+</pre></div>
+
+<p>Ejecutamos el programa con el comando:</p>
+<div class="codehilite"><pre><span></span>$ sudo ./VboxLinuxAdditions.run
+</pre></div>
+
+<p>La máquina virtual pedirá nuestra password. Tras introducirla, se procede a la instalación. Una vez terminado el proceso, se sale de la emulación de termina introduciendo el comando</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">exit</span>
+</pre></div>
+
+<p>En el icono del DVD virtual que hay en el escritorio, pulsamos con el botón secundario del ratón y en el menú emergente seleccionamos <em>Expulsar Volumen</em>.</p>
+<p><img alt="p019" src="img/p019.png" /></p>
+<p>Cerramos la máquina virtual y la reinicializamos para que las Guest Additions tengan efecto.</p>
+<h3 id="tamano-de-la-ventana">Tamaño de la ventana</h3>
+<p>Una de las mejoras que nos proporcionan las Guest Additions es la posibilidad de que la máquina virtual ocupe la pantalla completa, tapando el escritorio de la máquina física.</p>
+<p>VirtualBox tiene una tecla mágica llamada &ldquo;Host&rdquo;. En mi caso, un ordenador Mac, es la tecla <code class="codehilite">cmd</code> derecha. Esto se ve en la esquina inferior derecha de la ventana de la máquina virtual. Podemos configurarla en el menú <em>Preferencias</em> en la ventana principal de VirtualBox.</p>
+<p>Durante la sesión de trabajo, podemos cambiar a pantalla completa pulsando <code class="codehilite">Host-F</code>.</p>
+<h3 id="intercambio-de-datos">Intercambio de datos</h3>
+<p>Otra posibilidad de las Guest Additions es el intercambio de datos entre la máquina física y la virtual. Para ello, apagamos la máquina virtual y entramos en la configuración de la misma desde el menú principal de VirtualBox.</p>
+<p>En la pestaña General activamos &ldquo;Compartir portapapeles&rdquo; y &ldquo;Arrastrar y soltar&rdquo;:</p>
+<p><img alt="p020" src="img/p020.png" /></p>
+<p>En la pestaña Carpetas compartidas seleccionamos una carpeta de la máquina física:</p>
+<p><img alt="p021" src="img/p021.png" /></p>
+<p>Tras reiniciar la máquina virtual, comprobamos que el portapapeles permite copiar y pegar de una máquina a otra. La carpeta compartida se puede ver como:</p>
+<div class="codehilite"><pre><span></span>/media/sf_Public/
+</pre></div>
+
+
+<p>Aunque debemos tener permisos activados para tener acceso desde la máquina virtual a esa carpeta. Para ello tenemos que hacer lo siguiente:</p>
+<ul>
+<li>En el menú de aplicaciones, seleccionar el grupo <em>configuración</em> y seguidamente el programa <em>Users and Groups</em>.</li>
+</ul>
+<p><img alt="p022" src="img/p022.png" /></p>
+<ul>
+<li>Una vez iniciado el programa para configurar grupos y usuarios, pulsamos en el menú <em>Manage Groups</em>. El grupo <em>vboxf</em> indica los usuarios que tienen acceso a las carpetas de la máquina física. En la lista de grupos, hacemos doble clic sobre el mismo:</li>
+</ul>
+<p><img alt="p023" src="img/p023.png" /></p>
+<ul>
+<li>En la lista de usuarios, marcamos el nuestro como integrante del grupo:</li>
+</ul>
+<p><img alt="p024" src="img/p024.png" /></p>
+<p>Para realizar los cambios tendremos que introducir nuestra password. Para que tengan efecto y podamos visualizar el contenido de las carpetas compertidas, hay que reiniciar la máquina virtual.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            &copy; El taller de jf. Creado con
+            <a href="https://www.mkdocs.org">MkDocs</a>
+            y <a href="https://squidfunk.github.io/mkdocs-material/">
+            Material for MkDocs</a>. Última actualización: 18-11-2018
+        </div>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.583bbe55.js"></script>
+      
+        
+        
+          
+          <script src="assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

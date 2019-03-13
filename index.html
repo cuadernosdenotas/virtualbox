@@ -498,22 +498,22 @@
                 
                 <h1 id="virtual-box">Virtual Box <img src="img/logo.png" style="float:right;"></h1>
 <h2 id="maquinas-virtuales">Máquinas virtuales</h2>
-<p>Una máquina virtual es un software para simular un segundo ordenador cuyos programas se ejecutan compartiendo los recursos de nuestra máquina física (disco duro, CPU, pantalla, teclado, ratón, etc).</p>
-<p>Por ejemplo, en la siguiente imagen vemos una máquina virtual con el sistema operativo linux mostrando su escritorio dentro de una ventana sobre la pantalla de un Mac. </p>
+<p>Una máquina virtual es un software para simular un segundo ordenador, cuyos programas se ejecutan compartiendo los recursos de nuestra máquina física (disco duro, CPU, pantalla, teclado, ratón, etc).</p>
+<p>Por ejemplo, en la siguiente imagen vemos un sistema operativo linux mostrando su escritorio dentro de una ventana sobre la pantalla de un Mac. </p>
 <p><img alt="p026" src="img/p026.png" /></p>
 <p>El uso de máquinas virtuales resulta interesante para muchos propósitos:</p>
 <ul>
 <li>
-<p>supongamos que tenemos una máquina Mac y necesitamos ejecutar un programa windows; podríamos tener una máquina virtual con el sistema operativo de Microsoft y ejecutar allí el programa deseado</p>
+<p>supongamos que tenemos un Mac y necesitamos ejecutar un programa windows; podríamos tener una máquina virtual con el sistema operativo de Microsoft y ejecutar allí el programa deseado</p>
 </li>
 <li>
-<p>o bien queremos probar el sistema operativo Linux en una máquina windows; la máquina virtual permite hacerlo sin necesidad de desinstalar lo que tenemos</p>
+<p>o bien queremos probar Linux en un ordenador windows; la virtualización permite hacerlo sin necesidad de desinstalar lo que tenemos</p>
 </li>
 <li>
-<p>imaginemos por otra parte que estamos desarrollando una página web y queremos comprobar como se visualiza en cada sistema operativo. Podemos crear diferentes máquinas virtuales y hacer pruebas en cada una de ellas</p>
+<p>imaginemos por otra parte que estamos desarrollando una página web y queremos comprobar como se visualiza en cada entorno. Podemos crear diferentes máquinas virtuales y hacer pruebas en cada una de ellas</p>
 </li>
 <li>
-<p>o queremos navegar por Internet dejando posibles virus alejados de nuestra máquina física. Siempre podemos reinstalar de vez en cuando la máquina virtual y hacer limpieza&hellip;</p>
+<p>o queremos navegar por Internet dejando posibles virus alejados de nuestro ordenador. Podemos utilizar la máquina virtual y reinstalarla de vez en cuando, haciendo limpieza&hellip;</p>
 </li>
 </ul>
 <p>Todo esto se consigue con la ayuda de un software apropiado. En nuestro caso vamos a utilizar <em>VirtualBox</em>. Este programa hace lo siguiente:</p>
@@ -525,10 +525,10 @@
 <p>reserva parte del disco duro para simular un disco virtual</p>
 </li>
 <li>
-<p>comparte recursos con la máquina física: teclado, unidad DVD, USB, e incluso el portapapeles para copiar y pegar contenidos de la máquina virtual a la física, o a la inversa.</p>
+<p>comparte recursos con máquinas físicas y virtuales: teclado, unidad DVD, USB, e incluso el portapapeles para copiar y pegar contenidos de un entorno a otro.</p>
 </li>
 </ul>
-<p>Claro que, no todo son ventajas. Los tiempos de arranque y apagado se multiplican por dos, ya que ahora tendremos dos máquinas. Y la velocidad de ejecución de programas dependerá de los recursos asignados. En un equipo de 4 Mb de memoria, destinando la mitad a cada máquina, el rendimiento podría resentirse, por ejemplo.</p>
+<p>Claro que, no todo son ventajas. Los tiempos de arranque y apagado se multiplican por dos, ya que ahora tendremos dos computadoras. Y la velocidad de ejecución de programas dependerá de los recursos asignados. En un equipo de 4 Mb de memoria, destinando la mitad a cada sistema operativo, el rendimiento podría resentirse, por ejemplo.</p>
 <h2 id="acerca-de-virtualbox">Acerca de VirtualBox</h2>
 <p>VirtualBox fue creado en 2007 por una empresa alemana llamada <em>Innotek GmbH</em>. Aunque en sus inicios era un producto comercial, existía una versión gratuita para uso personal o evaluación. En 2008 <em>Innotek</em> fue adquirido por <em>Sun Microsystems</em>, quien a su vez fue absorbida en 2010 por <em>Oracle Corporation</em>. En la actualidad, Oracle lo distribuye como <em>Open Source</em> en su página web <a href="https://www.virtualbox.org/">https://www.virtualbox.org/</a></p>
 <p><img alt="p001" src="img/p001.png" /></p>
@@ -552,8 +552,8 @@
 <div class="codehilite"><pre><span></span>$ VirtualBox
 </pre></div>
 
-<p>Al iniciarse se verá la ventana de control ya mencionada, también conocida como <em>VirtualBox Manager</em>. En el panel izquierdo tenemos una lista (por ahora en blanco) de nuestras máquinas virtuales. Los iconos superiores permiten crear/eliminar máquinas, configurarlas o ponerlas en marcha.</p>
-<p>El panel de la derecha muestra las características de la máquina seleccionada en la lista. Como no tenemos ninguna, se muestra un mensaje de bienvenida.</p>
+<p>Al iniciarse se verá la ventana de control ya mencionada, también conocida como <em>VirtualBox Manager</em>. En el panel izquierdo tenemos una lista (por ahora en blanco) de nuestras máquinas virtuales. Los iconos superiores permiten crear/eliminar una de ellas, configurarlas o ponerlas en marcha.</p>
+<p>El panel de la derecha muestra las características de la seleccionada en la lista. Como no tenemos ninguna, se muestra un mensaje de bienvenida.</p>
 <p><img alt="p004" src="img/p004.png" /></p>
 <h2 id="creando-un-maquina-virtual">Creando un máquina virtual</h2>
 <p>Vamos a crear una máquina funcionando con el sistema operativo Ubuntu, una de las opciones más populares de Linux. Usaremos la versión Xubuntu, que utiliza el escritorio Xfce. Se trata de una versión con unos requerimientos gráficos no tan exigentes como otras más vistosas, lo que nos proporcionará mayor agilidad en el funcionamiento.</p>
@@ -561,9 +561,9 @@
 <a href="https://xubuntu.org/getxubuntu/requirements/">https://xubuntu.org/getxubuntu/requirements/</a></p>
 <p>En la ventana principal de VirtualBox pulsamos en el icono <em>Nuevo</em>, lo que da inicio al asistente para crear una nueva máquina. En la primera ventana tecleamos el nombre que le asignamos y el tipo de sistema operativo que vamos a instalar:</p>
 <p><img alt="p005" src="img/p005.png" /></p>
-<p>En la siguiente ventana decidimos que parte de la memoria de nuestro equipo vamos a reservar para la máquina virtual. Téngase en cuenta que si dejamos poca memoria para la máquina física, esta se verá ralentizada. Nos ajustamos a los requerimientos del sistema operativo a instalar:</p>
+<p>En la siguiente ventana decidimos que parte de la memoria de nuestro equipo vamos a reservar para la sesión virtual. Téngase en cuenta que si dejamos poca memoria para la máquina física, esta se verá ralentizada. Nos ajustamos a los requerimientos del sistema operativo a instalar:</p>
 <p><img alt="p006" src="img/p006.png" /></p>
-<p>El siguiente paso es crear un disco duro para la máquina virtual. En realidad se trata de un enorme fichero con la extensión .vdi en nuestra máquina física:</p>
+<p>El siguiente paso es crear un disco duro virtual. En realidad se trata de un enorme fichero con la extensión .vdi en nuestra máquina física:</p>
 <p><img alt="p007" src="img/p007.png" /></p>
 <p>VirtualBox es capaz de trabajar con diferentes formatos de discos virtuales. Seleccionamos el formato nativo de Vbox:</p>
 <p><img alt="p008" src="img/p008.png" /></p>
@@ -571,10 +571,10 @@
 <p><img alt="p009" src="img/p009.png" /></p>
 <p>Seguidamente seleccionamos el tamaño máximo del disco duro virtual:</p>
 <p><img alt="p010" src="img/p010.png" /></p>
-<p>Al pulsar en el botón [Crear] se creará la máquina virtual y aparecerá en nuestra lista de máquinas en la ventana principal de VirtualBox.</p>
+<p>Al pulsar en el botón [Crear] se creará la máquina virtual y aparecerá en la lista de máquinas en la ventana principal de VirtualBox.</p>
 <p><img alt="p011" src="img/p011.png" /></p>
 <h2 id="instalando-un-sistema-operativo-en-la-maquina-virtual">Instalando un sistema operativo en la máquina virtual</h2>
-<p>Lo primero es seleccionar el sistema operativo a instalar. Debe ser uno para el que tengamos el DVD o CD de instalación. En nuestro ejemplo, vamos a instalar <em>Linux</em>. Tenemos un ranking de las distribuciones más populares en http://distrowatch.com/. La que instalaremos es una de las más populares, <em>Ubuntu</em>, que se distribuye en diferentes alternativas dependiendo del programa de escritorio que queramos utilizar. Dado que el rendimiento de la máquina virtual siempre va a ser algo inferior al de la máquina física, prefiero utilizar un escritorio light como es el caso de <em>Xfce</em>.</p>
+<p>Lo primero es seleccionar el sistema operativo a instalar. Debe ser uno para el que tengamos el DVD o CD de instalación. En nuestro ejemplo, vamos a instalar <em>Linux</em>. Tenemos un ranking de las distribuciones más populares en http://distrowatch.com/. La que instalaremos es una de las más populares, <em>Ubuntu</em>, que se distribuye en diferentes alternativas dependiendo del programa de escritorio que queramos utilizar. Dado que el rendimiento de la sesión virtual siempre va a ser algo inferior al de una máquina física, prefiero utilizar un escritorio light como es el caso de <em>Xfce</em>.</p>
 <p>La versión de Ubuntu con este escritorio se llama <em>Xubuntu</em>, y podemos descargar el CD de instalación desde <a href="https://xubuntu.org/">https://xubuntu.org/</a></p>
 <p>Tanto Ubuntu como Xubuntu publican una nueva versión cada seis meses, generalmente en abril y en octubre. Cada versión tiene un número que indica el año y mes de lanzamiento. Por ejemplo, la versión 16.04 fue la presentada en abril de 2016. Además se suelen bautizar con nombres de animales más o menos exóticos. La 16.04 es la &ldquo;Xenial Xerus&rdquo;.</p>
 <p>Ubuntu se refresca diariamente con las últimas actualizaciones de cada programa. El mantenimiento está garantizado durante un período de nueve meses a contar desde el lanzamiento de cada versión, margen suficiente para que descarguemos e instalemos la siguiente. Para aquellas personas que no quieran estar cambiando continuamente de versión, existen unas especiales llamadas <em>LTS</em> (Long Time Support) cuyo mantenimiento se garantiza durante tres años.</p>
@@ -583,25 +583,25 @@
 <li>grabar un CD o un DVD a partir de ese archivo de imagen</li>
 <li>utilizar el archivo como CD virtual. Vamos a optar por esta segunda opción.</li>
 </ul>
-<p>El primer paso es iniciar <em>VirtualBox</em> y en la lista de máquinas virtuales de la izquierda seleccionar la máquina que hemos creado. Seguidamente pulsamos en el icono <code class="codehilite">Iniciar</code>:</p>
+<p>El primer paso es iniciar <em>VirtualBox</em> y en la lista de máquinas virtuales de la izquierda seleccionar la que hemos creado. Seguidamente pulsamos en el icono <code class="codehilite">Iniciar</code>:</p>
 <p><img alt="p011" src="img/p011.png" /></p>
 <p>Cuando iniciamos la máquina virtual por primera vez, <em>VirtualBox</em> nos pregunta si tenemos un DVD de instalación o vamos a usar un disco virtual:</p>
 <p><img alt="p012" src="img/p012.png" /></p>
 <p>Esta ventana muestra una lista desplegable para seleccionar entre nuestras unidades, y un pequeño icono amarillo a la derecha para seleccionar un archivo de imagen como DVD virtual. Pulsamos aquí y seleccionamos el archivo descargado:</p>
 <p><img alt="p013" src="img/p013.png" /></p>
-<p>Al pulsar en el botón <code class="codehilite">Iniciar</code> se arranca la máquina virtual en una segunda ventana:</p>
+<p>Al pulsar en el botón <code class="codehilite">Iniciar</code> se arranca la sesión virtual en una segunda ventana:</p>
 <p><img alt="p014" src="img/p014.png" /></p>
 <p>En la barra superior de la ventana veremos el nombre de la máquina, y en la barra inferior una serie de iconos para controlarla.</p>
-<p>Si el DVD de instalación no es válido, nuestra máquina mostrará la pantalla en negro y un mensaje de error:</p>
+<p>Si el DVD de instalación no es válido, se mostrará la pantalla en negro y un mensaje de error:</p>
 <p><img alt="p025" src="img/p025.png" /></p>
-<p>En caso contrario, se iniciará el proceso de instalación. Finalizado este, tendremos el escritorio de nuestra máquina virtual en una ventana de la máquina física.</p>
+<p>En caso contrario, se iniciará el proceso de instalación. Finalizado este, tendremos el escritorio de nuestra máquina virtual en una ventana de la física.</p>
 <p><img alt="p026" src="img/p026.png" /></p>
 <h2 id="pasos-post-instalacion">Pasos post instalación</h2>
 <h3 id="guest-additions">Guest Additions</h3>
-<p>VirtualBox es un software instalado en nuestra máquina física, pero la máquina virtual no es consciente de estar ejecutándose bajo la tutela de Vbox. Todo el software instalado en ella está configurado para una máquina física.</p>
-<p>Algunas de las posibilidades que proporciona VirtualBox no funcionan correctamente si en la máquina virtual no instalamos algunos programas complementarios. Estos se encuentran en un CD virtual llamado &ldquo;Guest Additions&rdquo;.</p>
+<p>VirtualBox es un software instalado en nuestra conputadora, pero la máquina virtual no es consciente de estar ejecutándose bajo la tutela de Vbox. Todo el software instalado en ella está configurado para una hipotética máquina física.</p>
+<p>Algunas de las posibilidades que proporciona VirtualBox no funcionan correctamente si en la sesión virtual no instalamos algunos programas complementarios. Estos se encuentran en un CD virtual llamado &ldquo;Guest Additions&rdquo;.</p>
 <p>Este CD lo proporciona VirtualBox. Basta con iniciar la máquina virtual y desde el menú de VirtualBox, seleccionar la  opción del menú <em>Dispositivos &gt; Instalar Guest Additions</em>.</p>
-<p>Una vez realizado este paso aparece ese CD virtual en el escritorio de la máquina. Haciendo doble clic en el icono, visualizaremos su contenido:</p>
+<p>Una vez realizado este paso aparece ese CD virtual en el escritorio. Haciendo doble clic en el icono, visualizaremos su contenido:</p>
 <p><img alt="p016" src="img/p016.png" /></p>
 <p>Tenemos que ejecutar el programa <em>VboxLinuxAdditions.run</em>. Para ello, comenzamos por tomar nota de la carpeta donde se aloja el CD virtual:</p>
 <p><img alt="p017" src="img/p017.png" /></p>
@@ -631,7 +631,7 @@ VboxWindowsAdditions.exe  64Bit  autorun.sh   OS2   VBoxLinuxAdditions.run  VBox
 <p><img alt="p019" src="img/p019.png" /></p>
 <p>Cerramos la máquina virtual y la reinicializamos para que las Guest Additions tengan efecto.</p>
 <h3 id="tamano-de-la-ventana">Tamaño de la ventana</h3>
-<p>Una de las mejoras que nos proporcionan las Guest Additions es la posibilidad de que la máquina virtual ocupe la pantalla completa, tapando el escritorio de la máquina física.</p>
+<p>Una de las mejoras que nos proporcionan las Guest Additions es la posibilidad de que la sesión virtual ocupe la pantalla completa, tapando el escritorio de la máquina física.</p>
 <p>VirtualBox tiene una tecla mágica llamada &ldquo;Host&rdquo;. En mi caso, un ordenador Mac, es la tecla <code class="codehilite">cmd</code> derecha. Esto se ve en la esquina inferior derecha de la ventana de la máquina virtual. Podemos configurarla en el menú <em>Preferencias</em> en la ventana principal de VirtualBox.</p>
 <p>Durante la sesión de trabajo, podemos cambiar a pantalla completa pulsando <code class="codehilite">Host-F</code>.</p>
 <h3 id="intercambio-de-datos">Intercambio de datos</h3>
@@ -640,7 +640,7 @@ VboxWindowsAdditions.exe  64Bit  autorun.sh   OS2   VBoxLinuxAdditions.run  VBox
 <p><img alt="p020" src="img/p020.png" /></p>
 <p>En la pestaña Carpetas compartidas seleccionamos una carpeta de la máquina física:</p>
 <p><img alt="p021" src="img/p021.png" /></p>
-<p>Tras reiniciar la máquina virtual, comprobamos que el portapapeles permite copiar y pegar de una máquina a otra. La carpeta compartida se puede ver como:</p>
+<p>Tras reiniciar la sesión virtual, comprobamos que el portapapeles permite copiar y pegar de una máquina a otra. La carpeta compartida se puede ver como:</p>
 <div class="codehilite"><pre><span></span>/media/sf_Public/
 </pre></div>
 
@@ -684,7 +684,7 @@ VboxWindowsAdditions.exe  64Bit  autorun.sh   OS2   VBoxLinuxAdditions.run  VBox
             &copy; El taller de jf. Creado con
             <a href="https://www.mkdocs.org">MkDocs</a>
             y <a href="https://squidfunk.github.io/mkdocs-material/">
-            Material for MkDocs</a>. Última actualización: 04-01-2019
+            Material for MkDocs</a>. Última actualización: 13-03-2019
         </div>
       </div>
       
